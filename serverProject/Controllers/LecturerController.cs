@@ -9,14 +9,14 @@ namespace serverProject.Controllers
     [ApiController]
     public class LecturerController : ControllerBase
     {
-        private static List<Lecturer> lecturers = new List<Lecturer>{
+        public static List<Lecturer> lecturers = new List<Lecturer>{
         new Lecturer { id = 1, name = "John Smith", address = "123 Main St", mail = "john@example.com", password = "password1" },
         new Lecturer { id = 2, name = "Jane Doe", address = "456 Elm St", mail = "jane@example.com", password = "password2" },
         new Lecturer { id = 3, name = "Alice Johnson", address = "789 Oak St", mail = "alice@example.com", password = "password3" },
         new Lecturer { id = 4, name = "Bob Brown", address = "101 Pine St", mail = "bob@example.com", password = "password4" },
         new Lecturer { id = 5, name = "Emily Davis", address = "202 Cedar St", mail = "emily@example.com", password = "password5" }
         };
-        private static int counter = 0;
+        private static int counter = 5;
 
 
         // GET: api/<LecturerController>

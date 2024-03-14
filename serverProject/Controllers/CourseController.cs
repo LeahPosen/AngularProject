@@ -19,13 +19,13 @@ namespace serverProject.Controllers
                 new Category { id = 5, name = "Health", icon = "heart" }
         };
         private static List<Course> courses = new List<Course>  {
-                new Course(1, 1, "Introduction to Programming", categories[0], 12, new DateTime(2022, 3, 15), new List<string> {"Basic concepts", "Data types", "Control structures"}, Study.Online, "intro-programming.jpg"),
-                new Course(2, 2, "Artificial Intelligence Fundamentals", categories[1], 10, new DateTime(2022, 4, 10), new List<string> {"Machine learning", "Neural networks", "Deep learning"}, Study.Hybrid, "ai-fundamentals.jpg"),
-                new Course(3, 3, "Financial Management",categories[2], 8, new DateTime(2022, 4, 25), new List<string> {"Budgeting", "Investment analysis", "Risk management"}, Study.Offline, "financial-management.jpg"),
-                new Course(4, 4, "Introduction to Psychology", categories[3], 15, new DateTime(2022, 5, 5), new List<string> {"Behavioral psychology", "Cognitive psychology", "Developmental psychology"}, Study.Online, "intro-psychology.jpg"),
-                new Course(5, 5, "Graphic Design Basics", categories[4], 6, new DateTime(2022, 5, 20), new List<string> {"Color theory", "Typography", "Layout design"}, Study.Offline, "graphic-design.jpg")
+                new Course(1, 1, "Introduction to Programming", categories[0], 12, new DateTime(2022, 3, 15), new List<string> {"Basic concepts", "Data types", "Control structures"}, Study.Online, "https://material.angular.io/assets/img/examples/shiba2.jpg"),
+                new Course(2, 2, "Artificial Intelligence", categories[1], 10, new DateTime(2022, 4, 10), new List<string> {"Machine learning", "Neural networks", "Deep learning"}, Study.Hybrid, "https://material.angular.io/assets/img/examples/shiba2.jpg"),
+                new Course(3, 3, "Financial Management",categories[2], 8, new DateTime(2022, 4, 25), new List<string> {"Budgeting", "Investment analysis", "Risk management"}, Study.Offline, "https://material.angular.io/assets/img/examples/shiba2.jpg"),
+                new Course(4, 4, "Introduction to Psychology", categories[3], 15, new DateTime(2022, 5, 5), new List<string> {"Behavioral psychology", "Cognitive psychology", "Developmental psychology"}, Study.Online, "https://material.angular.io/assets/img/examples/shiba2.jpg"),
+                new Course(5, 5, "Graphic Design Basics", categories[4], 6, new DateTime(2022, 5, 20), new List<string> {"Color theory", "Typography", "Layout design"}, Study.Offline,"https://material.angular.io/assets/img/examples/shiba2.jpg")
             };
-        private static int counter = 0;
+        private static int counter = 5;
         // GET: api/<CourseController>
         [HttpGet]
         public IEnumerable<Course> Get()

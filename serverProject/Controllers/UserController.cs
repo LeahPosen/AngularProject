@@ -15,7 +15,7 @@ namespace serverProject.Controllers
             new User { id = 2, name = "Jane Smith",    mail = "jane@example.com", password = "password2" },
             new User { id = 3, name = "Alice Johnson", mail = "alice@example.com",password = "password3" }
         };
-        private static int counter = 0;
+        private static int counter = 3;
         // GET: api/<UserController>
         [HttpGet]
         public IEnumerable<User> Get()
@@ -24,12 +24,21 @@ namespace serverProject.Controllers
         }
 
         // GET api/<UserController>/5
-        [HttpGet("{id}")]
-        public User Get(int id)
-        {
-            return users.Find(u => u.id == id);
-        }
+        //[HttpGet("{id}")]
+        //public User Get(int id)
+        //{
+        //    return users.Find(u => u.id == id);
+        //}
 
+
+        [HttpGet("{name}")]
+        public ActionResult<User> Get(string name)
+        {
+            var user = users.Find(u => u.name == name);
+            if (user is null)
+                return NotFound();
+            return Ok(user);
+        }
         // POST api/<UserController>
         [HttpPost]
         public void Post([FromBody] User value)
